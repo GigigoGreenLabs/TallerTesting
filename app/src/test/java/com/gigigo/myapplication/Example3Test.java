@@ -3,20 +3,22 @@ package com.gigigo.myapplication;
 // http://junit.czweb.org/apidocs/org/junit/runners/MethodSorters.html
 
 
+import org.junit.Test;
+
 //@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Example3Test {
 
-//    @Test
+    @Test
     public void testEdit() {
         System.out.println("Edited");
     }
 
-//    @Test
+    @Test
     public void testCreate() {
         System.out.println("Created");
     }
 
-//    @Test
+    @Test
     public void testRemove() {
         System.out.println("Removed");
     }

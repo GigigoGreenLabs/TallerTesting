@@ -4,7 +4,7 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
-
+import org.junit.Test;
 
 
 public class Example1Test {
@@ -20,11 +20,12 @@ public class Example1Test {
     }
 
 
+    @Test
     public void test1() {
         System.out.println("test1");
     }
 
-
+    @Test
     public void test2() {
         System.out.println("test2");
     }

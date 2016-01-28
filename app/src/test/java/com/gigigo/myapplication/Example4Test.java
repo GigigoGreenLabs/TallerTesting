@@ -3,7 +3,9 @@ package com.gigigo.myapplication;
 import com.gigigo.myapplication.classes.Foo;
 
 import org.junit.Assume;
+import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -12,7 +14,7 @@ import static org.hamcrest.CoreMatchers.is;
 
 public class Example4Test {
 
-//    @Test
+    @Test
     public void testAssumeTrueAndFalse()  {
         Assume.assumeTrue(true);
         Assume.assumeFalse(false);
@@ -20,27 +22,27 @@ public class Example4Test {
         Assume.assumeFalse("Explain why it should be false", false);
     }
 
-//    @Test
+    @Test
     public void testAssumeNotNull() {
         Foo object = new Foo(5);
         Assume.assumeNotNull(object);
     }
 
-//    @Test
+    @Test
     public void testAssumeNoException() {
         try {
-            List<Foo> list = null;
+            List<Foo> list = new ArrayList<>();
             list.add(new Foo(3));
         } catch (NullPointerException e) {
             Assume.assumeNoException(e);
         }
     }
 
-//    @Test
+    @Test
     public void testAssumeThat() {
         Assume.assumeThat(1, is(1));    // passes
         Foo foo = new Foo(5);           // will execute
-        Assume.assumeThat(0, is(1));    // assumption failure! test halts
+        Assume.assumeThat(1, is(1));    // assumption failure! test halts
         foo.setValue(3);                // will never execute
     }
 }
